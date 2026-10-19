@@ -1,0 +1,14 @@
+name: CI Smoke Signal
+
+on:
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Print smoke test marker
+        run: echo "SMOKE-TEST-OK"
